@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "446981582351",
+    "project_id": "login-register-firebase-4f8b6",
+    "storage_bucket": "login-register-firebase-4f8b6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:446981582351:android:f9af35388a3df3cd647d7a",
+        "android_client_info": {
+          "package_name": "com.alperen.myapplication"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBaflh-P075-cq9PNP44IXIQI4wtmkCPAQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

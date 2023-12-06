@@ -11,18 +11,16 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
         android:layout_marginStart="56dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="40dp"
         android:layout_marginEnd="56dp"
-        android:layout_marginBottom="227dp"
         android:fontFamily="@font/s"
         android:text="Portföy Expo'ya hoş geldiniz"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textSize="30dp"
-        app:layout_constraintBottom_toTopOf="@+id/textInputLayout3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -30,13 +28,11 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="0dp"
+        android:layout_width="299dp"
         android:layout_height="150dp"
         android:layout_marginStart="56dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="50dp"
         android:layout_marginEnd="56dp"
-        android:layout_marginBottom="10dp"
-        app:layout_constraintBottom_toTopOf="@+id/textInputLayout3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2"
@@ -47,19 +43,18 @@
         android:id="@+id/textInputLayout4"
         style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
         android:layout_width="350dp"
-        android:layout_height="58dp"
-        android:layout_marginTop="-10dp"
-        android:layout_marginBottom="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/loginbtn"
+        android:layout_height="64dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="56dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout3">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/InputPassword"
             android:layout_width="350dp"
-            android:layout_height="48dp"
+            android:layout_height="55dp"
             android:hint="Password" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -67,17 +62,18 @@
         android:id="@+id/textInputLayout3"
         style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
         android:layout_width="350dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="180dp"
-        app:layout_constraintBottom_toTopOf="@+id/registerbtn"
+        android:layout_height="61dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="90dp"
+        android:layout_marginEnd="56dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2">
+        app:layout_constraintTop_toBottomOf="@+id/imageView2">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/InputMail"
             android:layout_width="350dp"
-            android:layout_height="48dp"
+            android:layout_height="55dp"
             android:hint="E-Mail"
 
             />
@@ -88,30 +84,31 @@
 
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="56dp"
         android:width="130sp"
         android:background="@drawable/loginbtn"
         android:text="Giriş"
         android:theme="@style/Theme.Material3.DynamicColors.DayNight"
-        app:layout_constraintBottom_toTopOf="@+id/registerbtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout3" />
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout4" />
 
     <Button
         android:id="@+id/registerbtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="58dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="56dp"
         android:width="130sp"
         android:background="@drawable/loginbtn"
         android:text="Kayıt ol"
         android:theme="@style/Theme.Material3.DynamicColors.Light"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout3" />
+        app:layout_constraintTop_toBottomOf="@+id/loginbtn" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,6 +3,7 @@ package com.alperen.myapplication
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import com.alperen.myapplication.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -14,9 +15,17 @@ class MainActivity : AppCompatActivity() {
         setContentView(view)
 
         binding.registerbtn.setOnClickListener{
-            val intent= Intent(applicationContext,registerscreen::class.java)
+            val intent= Intent(applicationContext, registerscreen::class.java)
             startActivity(intent)
         }
+
+        binding.loginbtn.setOnClickListener {
+            val intent = Intent(applicationContext,HomePage::class.java)
+            startActivity(intent)
+        }
+
+
+
 
     }
 }

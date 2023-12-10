@@ -33,6 +33,11 @@ class recycle_adapter(val UserList: ArrayList<View>) :
     override fun onBindViewHolder(holder: UsersVH, position: Int) {
         var name = holder.itemView.findViewById<TextView>(R.id.nameSurname)
         name.text = "alperen tokay"
+        var age = holder.itemView.findViewById<TextView>(R.id.age)
+        age.text="ya? 21"
+        var job = holder.itemView.findViewById<TextView>(R.id.Job)
+        job.text="Mobil yazılımcı"
+
         var card: CardView = holder.itemView.findViewById<CardView>(R.id.card)
 
 

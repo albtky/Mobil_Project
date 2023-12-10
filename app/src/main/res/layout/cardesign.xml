@@ -19,24 +19,27 @@
         android:id="@+id/nameSurname"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Alperen Tokay"
+        android:text="isim Soy isim"
+        android:fontFamily="@font/mango"
         android:textSize="24sp"
         android:textStyle="bold" />
     <TextView
         android:id="@+id/age"
         android:layout_width="match_parent"
+        android:fontFamily="sans-serif-condensed-light"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:text="Yaş 21"
+        android:layout_marginTop="58dp"
+        android:text="Yaş"
         android:textSize="20sp" />
 
     <TextView
         android:id="@+id/Job"
         android:layout_width="match_parent"
+        android:fontFamily="@font/cofbold"
         android:layout_height="wrap_content"
-        android:layout_marginTop="35dp"
-        android:text="Mobil Yazılımcı"
-        android:textSize="20sp"
+        android:layout_marginTop="34dp"
+        android:text="Mobil Yazılımcı "
+        android:textSize="18sp"
         android:textStyle="italic" />
 
 </androidx.cardview.widget.CardView>

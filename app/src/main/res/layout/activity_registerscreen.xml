@@ -17,18 +17,22 @@
         app:helperText="Gerekli*"
         app:helperTextTextColor="@color/red"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/regemail"
             android:layout_width="350dp"
             android:layout_height="55dp"
             android:hint="Mail adress" />
+
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout2"
         android:layout_width="350sp"
+
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
@@ -36,10 +40,13 @@
         app:helperTextTextColor="@color/red"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout">
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
+app:passwordToggleEnabled="true"        >
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/regpass"
             android:layout_width="350dp"
+            android:inputType="textPassword"
             android:layout_height="55dp"
             android:hint="Password" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -113,7 +120,7 @@
         android:id="@+id/next"
         android:layout_width="130sp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="127dp"
+        android:layout_marginStart="147dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="124dp"
         android:background="@drawable/loginbtn"
@@ -121,5 +128,19 @@
         app:layout_constraintEnd_toEndOf="@+id/textInputLayout4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout4" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:id="@+id/textsignın"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="sans-serif"
+        android:text="Giriş yap"
+        android:textAlignment="center"
+        android:textSize="19sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/next" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

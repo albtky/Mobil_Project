@@ -29,14 +29,14 @@ class MainActivity : AppCompatActivity() {
             val pass = binding.InputPassword.text.toString()
             if( email.isNotEmpty()&& pass.isNotEmpty())
             {
-                firebaseAuth.createUserWithEmailAndPassword(email,pass).addOnCompleteListener{
+                firebaseAuth.signInWithEmailAndPassword(email,pass).addOnCompleteListener{
                     if (it.isSuccessful)
                     {
                         val intent = Intent(applicationContext, HomePage::class.java)
                         startActivity(intent)
                     }
                     else{
-                        Toast.makeText(this,it.exception.toString(), Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this,   "Kullanıcı bulunamadı", Toast.LENGTH_SHORT).show()
                     }
 
                 }

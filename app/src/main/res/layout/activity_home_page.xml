@@ -8,6 +8,16 @@
     android:orientation="vertical"
     tools:context=".HomePage">
 
+    <Button
+        android:id="@+id/exitbtn"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:layout_margin="20dp"
+        android:background="@drawable/exitbtn"
+        android:text="Çıkış"
+        />
+
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerview"

@@ -17,6 +17,7 @@ class registerscreen : AppCompatActivity() {
     private lateinit var firebaseAuth: FirebaseAuth
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         binding = ActivityRegisterscreenBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)

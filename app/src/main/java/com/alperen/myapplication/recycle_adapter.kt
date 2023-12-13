@@ -11,16 +11,16 @@ import com.alperen.myapplication.databinding.ActivityHomePageBinding
 import com.alperen.myapplication.databinding.ActivityRegisterscreenBinding
 import org.w3c.dom.Text
 import java.util.List;
+import kotlin.coroutines.coroutineContext
 
 
-class recycle_adapter(regbinding: registerscreen, val UserList: ArrayList<View>) :
+class recycle_adapter(val UserList: ArrayList<UserInfo>) :
 
     RecyclerView.Adapter<recycle_adapter.UsersVH>() {
 
-    class UsersVH(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    class UsersVH( itemView: View) : RecyclerView.ViewHolder(itemView) {
 
     }
-
 
 
     override fun onCreateViewHolder( parent: ViewGroup, viewType: Int): UsersVH {
@@ -35,22 +35,11 @@ class recycle_adapter(regbinding: registerscreen, val UserList: ArrayList<View>)
     }
 
     override fun onBindViewHolder(holder: UsersVH, position: Int) {
-        val inflater= LayoutInflater.from(holder.itemView.context)
-        val regsiterview=inflater.inflate(R.layout.activity_registerscreen,null)
-        val regName = regsiterview.findViewById<TextView>(R.id.regName)
-        val regAge = regsiterview.findViewById<TextView>(R.id.regAge)
-        val regJob = regsiterview.findViewById<TextView>(R.id.regJob)
+        val currentUser = UserList[position]
 
-        var name = holder.itemView.findViewById<TextView>(R.id.nameSurname)
-        name.text = regName.text.toString()
-        var age = holder.itemView.findViewById<TextView>(R.id.age)
-        age.text=regAge.text.toString()
-        var job = holder.itemView.findViewById<TextView>(R.id.Job)
-        job.text=regJob.text.toString()
-
-        var Card:CardView= holder.itemView.findViewById<CardView>(R.id.card)
-
-
-
+        holder.itemView.findViewById<TextView>(R.id.nameSurname).text= currentUser.nameSurname
+        holder.itemView.findViewById<TextView>(R.id.Job).text=currentUser.Job
+        holder.itemView.findViewById<TextView>(R.id.age).text=currentUser.age
     }
+
 }

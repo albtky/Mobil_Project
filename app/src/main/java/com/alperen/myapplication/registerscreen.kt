@@ -27,8 +27,7 @@ class registerscreen : AppCompatActivity() {
 
             val email = binding.regemail.text.toString()
             val pass = binding.regpass.text.toString()
-            if (email.isNotEmpty() && pass.isNotEmpty())
-            {
+            if (email.isNotEmpty() && pass.isNotEmpty()) {
                  firebaseAuth.createUserWithEmailAndPassword(email,pass).addOnCompleteListener{
                      if(it.isSuccessful)
                      {
@@ -46,10 +45,11 @@ class registerscreen : AppCompatActivity() {
                 Toast.makeText(this, "Alan boş bırakılamaz", Toast.LENGTH_SHORT).show()
             }
         }
-            binding.textsignN.setOnClickListener{
+
+        binding.textsignN.setOnClickListener{
             val intent = Intent(applicationContext, MainActivity::class.java)
             startActivity(intent)
-            }
+        }
 
 
     }

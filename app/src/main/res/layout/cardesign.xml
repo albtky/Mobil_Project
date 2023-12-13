@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="121dp"
     android:layout_marginLeft="10dp"
-    android:layout_marginTop="60dp"
+    android:layout_marginTop="20dp"
     android:layout_marginRight="10dp"
     app:contentPaddingLeft="30dp"
     app:cardCornerRadius="15dp"

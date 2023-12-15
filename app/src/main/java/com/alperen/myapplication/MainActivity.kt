@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
                 firebaseAuth.signInWithEmailAndPassword(email,pass).addOnCompleteListener{
                     if (it.isSuccessful)
                     {
-                        val intent = Intent(applicationContext, HomePage::class.java)
+                        val intent = Intent(applicationContext, HomePageActivity::class.java)
                         startActivity(intent)
                     }
                     else{
@@ -50,7 +50,7 @@ class MainActivity : AppCompatActivity() {
 
         // KAYIT EKRANI BUTONU
         binding.registerbtn.setOnClickListener {
-            val intent = Intent(applicationContext, registerscreen::class.java)
+            val intent = Intent(applicationContext, RegisterScreenActivity::class.java)
             startActivity(intent)
         }
 
@@ -61,7 +61,7 @@ class MainActivity : AppCompatActivity() {
 
         if(firebaseAuth.currentUser!=null)
         {
-            val intent =Intent(this,HomePage::class.java)
+            val intent =Intent(this,HomePageActivity::class.java)
             startActivity((intent))
         }
     }

@@ -4,19 +4,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import androidx.annotation.NonNull
-import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
-import com.alperen.myapplication.databinding.ActivityHomePageBinding
-import com.alperen.myapplication.databinding.ActivityRegisterscreenBinding
-import org.w3c.dom.Text
-import java.util.List;
-import kotlin.coroutines.coroutineContext
 
 
-class recycle_adapter(val UserList: ArrayList<UserInfo>) :
+class RecyclerAdapter(val UserList: ArrayList<UserInfo>) :
 
-    RecyclerView.Adapter<recycle_adapter.UsersVH>() {
+    RecyclerView.Adapter<RecyclerAdapter.UsersVH>() {
 
     class UsersVH( itemView: View) : RecyclerView.ViewHolder(itemView) {
 
@@ -37,9 +30,9 @@ class recycle_adapter(val UserList: ArrayList<UserInfo>) :
     override fun onBindViewHolder(holder: UsersVH, position: Int) {
         val currentUser = UserList[position]
 
-        holder.itemView.findViewById<TextView>(R.id.nameSurname).text= currentUser.nameSurname
-        holder.itemView.findViewById<TextView>(R.id.Job).text=currentUser.Job
-        holder.itemView.findViewById<TextView>(R.id.age).text=currentUser.age
+        holder.itemView.findViewById<TextView>(R.id.nameSurname).text= currentUser.regNamesurname
+        holder.itemView.findViewById<TextView>(R.id.Job).text=currentUser.regJob
+        holder.itemView.findViewById<TextView>(R.id.age).text=currentUser.regAge
     }
 
 }

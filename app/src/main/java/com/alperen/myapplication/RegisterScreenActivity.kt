@@ -22,6 +22,8 @@ class RegisterScreenActivity : AppCompatActivity() {
     private lateinit var emailBinding: ItemEmailBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        profileBinding=UserProfileBinding.inflate(layoutInflater)
+        emailBinding= ItemEmailBinding.inflate(layoutInflater)
 
         binding = ActivityRegisterscreenBinding.inflate(layoutInflater)
         val view = binding.root
@@ -60,7 +62,6 @@ class RegisterScreenActivity : AppCompatActivity() {
                     if (it.isSuccessful) {
 
                         val intent = Intent(this, MainActivity::class.java)
-                        startActivity(intent)
                     } else {
                         Toast.makeText(this, it.exception.toString(), Toast.LENGTH_SHORT).show()
 

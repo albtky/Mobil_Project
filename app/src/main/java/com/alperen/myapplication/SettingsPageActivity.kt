@@ -63,7 +63,6 @@ class SettingsPageActivity : AppCompatActivity() {
             infoBinding.numberInProfile.text = number
             ınCardBinding.Job.text = job
             // Gönderilmesi denenen IMG dosyasının firebaser storage database'e kaydedildiği fonksiyon
-            saveData()
             Toast.makeText(this, "GÜNCELLEMELER YAPILDI", Toast.LENGTH_SHORT).show()
             intent = Intent(this, UserProfileActivity::class.java)
             intent.putExtra("Değişen isim", name)

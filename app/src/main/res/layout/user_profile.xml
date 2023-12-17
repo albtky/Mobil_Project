@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@drawable/background1"
+    android:orientation="vertical"
+    tools:context=".HomePageActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/backBtnInProfile"
+                    android:layout_width="50dp"
+                    android:layout_height="54dp"
+                    android:layout_margin="10dp"
+                    android:layout_alignParentStart="true"
+                    android:src="@drawable/ic_arrow" />
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="80dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/settingsInProfile"
+                    android:layout_marginBottom="10dp"
+                    android:src="@drawable/settings_icon" />
+
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:id="@+id/nameInProfile"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:text="Profile"
+                android:textColor="@color/white"
+                android:textSize="33sp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include layout="@layout/item_add" />
+            <include layout="@layout/item_email" />
+            <include layout="@layout/item_info" />
+            <include layout="@layout/item_info" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

@@ -29,6 +29,8 @@ class RegisterScreenActivity : AppCompatActivity() {
 
         firebaseAuth = FirebaseAuth.getInstance()
 
+
+        //Kullanıcı tüm kişisel bilgilerini girdikten sonra kayıt ol tuşuna bastıktan sonra gerçekleşmesi gereken aksiyonlar
         binding.next.setOnClickListener {
 
             val email = binding.regemail.text.toString()
@@ -53,7 +55,7 @@ class RegisterScreenActivity : AppCompatActivity() {
 
 
 
-
+                // Girilen değerlerden mail ve password'e göre firebase database'de bir kayıt oluşturur
                 firebaseAuth.createUserWithEmailAndPassword(email, pass).addOnCompleteListener {
                     if (it.isSuccessful) {
 

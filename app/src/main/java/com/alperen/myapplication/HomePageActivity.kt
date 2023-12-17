@@ -26,8 +26,11 @@ class HomePageActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
+        // Kullanıcı verileinin tutulup recyclerview içerisinde sıralanmasına olanak tanıyan UserInfo model sınıfına bağlı arrayList'im
         var userList = ArrayList<UserInfo>()
         val layoutManager = LinearLayoutManager(this)
+
+        // Otomatik olarak bilgiler eklenemediği için manuel bir şekilde kullanıcı bilgilerinin girilmesi
         val userInfo =
             UserInfo("alperen tokay", "21", "Mobil Yazılımcı", "alperen.tky06@gmail.com", "123456")
         val userInfo2 =
@@ -45,26 +48,29 @@ class HomePageActivity : AppCompatActivity() {
         userList.add(userInfo4)
         userList.add(userInfo5)
         userList.add(userInfo6)
+
+        // Recyclerview Adapter sınıfının bağlantısı
         binding.recyclerview.layoutManager = layoutManager
         val adapter = RecyclerAdapter(userList)
         binding.recyclerview.adapter = adapter
 
+        // oturumu kapatmak için kullanılan butonun onClick'i
         binding.exitbtn.setOnClickListener {
             FirebaseAuth.getInstance().signOut()
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
             finish()
         }
+
+        // Recyclerview itemlerinin üzerine tıklandığında gerçekleşmesi beklenen aksiyon
         adapter.setOnItemClickListener(object : RecyclerAdapter.OnItemClickListener {
             override fun onItemClick(position: Int) {
-                // Tıklandığında UserProfileActivity'ye geçiş yapacak Intent kodu
-                val intent = Intent(this@HomePageActivity, UserProfileActivity::class.java)
-                // Geçiş yaparken gerekli verileri veya bilgileri eklemek isterseniz burada ekleyebilirsiniz
-                // intent.putExtra("KEY", value); gibi
 
+                val intent = Intent(this@HomePageActivity, UserProfileActivity::class.java)
                 startActivity(intent)
             }
         })
+        // Kullanıcıların profil sayfasına geçişini sağlayan icon
         binding.settings.setOnClickListener {
             intent = Intent(this, UserProfileActivity::class.java)
             startActivity(intent)

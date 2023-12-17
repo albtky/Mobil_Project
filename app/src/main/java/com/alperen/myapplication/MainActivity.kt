@@ -22,11 +22,13 @@ class MainActivity : AppCompatActivity() {
 
 
 
-        //GİRİŞ YAP BUTONU
+        //Oturum açmak için kullanılan butonun onClick'i
         binding.loginbtn.setOnClickListener {
 
             val email = binding.InputMail.text.toString()
             val pass = binding.InputPassword.text.toString()
+
+            // Girilen değerler boş değilse eğer ve girilen bilgiler doğru ise gereken aksiyonların gerçekleşmesini sağlayan if else bloğu
             if( email.isNotEmpty()&& pass.isNotEmpty())
             {
                 firebaseAuth.signInWithEmailAndPassword(email,pass).addOnCompleteListener{
@@ -48,7 +50,7 @@ class MainActivity : AppCompatActivity() {
         }
 
 
-        // KAYIT EKRANI BUTONU
+        // Kayıt olma butonu onClick'i
         binding.registerbtn.setOnClickListener {
             val intent = Intent(applicationContext, RegisterScreenActivity::class.java)
             startActivity(intent)
